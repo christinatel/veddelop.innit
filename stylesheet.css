@@ -15,9 +15,17 @@ body{
     top: 10px;
     z-index: -1;
         
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 nav {
     background-color: #DA3737;
-    padding: 10px;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
 }
 
 ul {
@@ -44,13 +52,17 @@ img {
     text-align: right; 
 }
 
-
 a {
     text-decoration: none;
     color: white;
     font-size: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+a:hover {
+    color: black;
+}
+
  #rules{
             position: absolute;
             left: 10%;
