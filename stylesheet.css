@@ -34,6 +34,15 @@ a {
     font-size: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+ #rules{
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            bottom: 10%;
+            right: 10%;
+            background-color: white;
+            display: none;
+        }
 
 a:hover {
     color: black;
