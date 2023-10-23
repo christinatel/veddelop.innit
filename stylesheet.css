@@ -1,15 +1,19 @@
 body{
    
    background-image:url(Publikum2.png) ; 
-    background-image: url();
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto, cover;
     }
 
 #publikum {
     position: absolute;
-    width: 1922px;
-    height: 415px;
-    left: 0px;
-    top: 124px;
+    max-width: 1920px;
+    max-height: 320px;
+    left: 0%;
+    top: 10px;
+    z-index: -1;
         
 nav {
     background-color: #DA3737;
