@@ -1,1 +1,41 @@
+nav {
+    background-color: #DA3737;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    padding: 10px;
+}
+
+li.logo {
+    padding: 0;
+}
+
+img {
+    max-height: 70px;
+}
+
+.navbar {
+    text-align: right; 
+}
+
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a:hover {
+    color: black;
+}
 
