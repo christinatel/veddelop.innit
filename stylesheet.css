@@ -1,3 +1,16 @@
+body{
+   
+   background-image:url(Publikum2.png) ; 
+    background-image: url();
+    }
+
+#publikum {
+    position: absolute;
+    width: 1922px;
+    height: 415px;
+    left: 0px;
+    top: 124px;
+        
 nav {
     background-color: #DA3737;
     padding: 10px;
