@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .hester{
+            display: flex;
+            flex-direction: column;
+            width: max-content;
+        }
+        #heart {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
+        }
+
+        #spar {
+            position: absolute;
+            top: 100px;
+            left: 50px;
+            transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
+        }
+        #clover {
+            position: absolute;
+            top: 150px;
+            left: 50px;
+            transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
+        }
+        #ruter {
+            position: absolute;
+            top: 200px;
+            left: 50px;
+            transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <button id="revealCard">Trykk</button>
+        <div id="revealedSuit" style="display: none;"></div>
+    </div>
+   
+    <div class="hester">
+        <div class="hest" id="heart"><img src="Hjerter.png" style="width: 50px;"></div>
+        <div class="hest" id="spar"><img src="Spar.png" style="width: 50px;"></div>
+        <div class="hest" id="clover"><img src="Kløver.png" style="width: 50px;"></div>
+        <div class="hest" id="ruter"><img src="Ruter.png" style="width: 50px;"></div>
+    </div>
+    <script>
+          const suits = ["Spar", "Clover", "Ruter", "Hearts"];
+ 
+document.getElementById("revealCard").addEventListener("click", function() {
+    const revealedSuit = suits[Math.floor(Math.random() * suits.length)];
+    document.getElementById("revealedSuit").textContent = revealedSuit;
+    document.getElementById("revealedSuit").style.display = "block";
+    if(revealedSuit == "Hearts"){
+        moveHeart()
+    }
+    else if(revealedSuit == "Spar"){
+        moveSpar()
+    }
+    else if(revealedSuit == "Ruter"){
+        moveRuter()
+    }
+    else if(revealedSuit == "Clover"){
+        moveClover()
+    }
+});
+ 
+        let heart = document.getElementById("heart");
+        let spar = document.getElementById("spar")
+        let clover = document.getElementById("clover")
+        let ruter = document.getElementById("ruter")
+
+        function moveHeart() {
+           
+                // Angi avstanden du vil flytte objektet
+                const distanceToMove = 100; // endre denne verdien etter behov
+                const currentLeft = parseInt(heart.style.left) || 0;
+                heart.style.left = (currentLeft + distanceToMove) + "px";
+            
+        }
+        function moveSpar() {
+           
+                // Angi avstanden du vil flytte objektet
+                const distanceToMove = 100; // endre denne verdien etter behov
+                const currentLeft = parseInt(spar.style.left) || 0;
+                spar.style.left = (currentLeft + distanceToMove) + "px";
+            
+        }
+        function moveClover() {
+           
+                // Angi avstanden du vil flytte objektet
+                const distanceToMove = 100; // endre denne verdien etter behov
+                const currentLeft = parseInt(clover.style.left) || 0;
+                clover.style.left = (currentLeft + distanceToMove) + "px";
+            
+        }
+        function moveRuter() {
+         
+                // Angi avstanden du vil flytte objektet
+                const distanceToMove = 100; // endre denne verdien etter behov
+                const currentLeft = parseInt(ruter.style.left) || 0;
+                ruter.style.left = (currentLeft + distanceToMove) + "px";
+            
+        }
+       
+     
+    </script>
+</body>
+</html>
