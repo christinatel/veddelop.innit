@@ -32,6 +32,11 @@ margin-top: 19%;
    
  }
         
+@font-face {
+    font-family: horse;
+    src:url(HobbyHorseNF.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -72,13 +77,22 @@ img {
 a {
     text-decoration: none;
     color: white;
-    font-size: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+    font-family: horse;
+    -webkit-text-stroke: 1px black;
 }
 
 a:hover {
     color: black;
 }
+
+.fargeknapp {
+    background-color: #C23939; /* A slightly darker red */
+    color: white;
+    padding: 10px 15px; /* Adjust the padding as needed */
+    border-radius: 5px; /* Rounded corners */
+}
+
 
  #rules{
             position: absolute;
