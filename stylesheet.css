@@ -1,17 +1,16 @@
 body{
    
-   background-image:url(Publikum2.png) ; 
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: auto, cover;
-    }
-
+    
+     background-position: center top;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: auto, cover;
+     }
+ 
  #publikum {
      position: absolute;
      max-width: 100%;
      max-height: 100%;
-     left: 0%;
      margin-bottom: 80%;
      z-index: -1; 
  }
@@ -23,14 +22,58 @@ max-width: 100%;
 max-height: 100%;
 margin-top: 19%;
 
+
  }
 
  #KortBakgrunn{
     position: absolute;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 100%; 
+    max-height: 100%
    
+  
  }
+
+
+ #bakKort{
+    position: absolute;
+    max-width: 25%;
+    max-height: 25%;
+    margin-top: 3.5%;
+    margin-left: 5%;
+ }
+
+ #ruterHest{
+    position: absolute;
+    max-width: 14%;
+    max-height: 14%;
+    margin-top: 18.9%;
+    z-index: 2;
+ }
+ 
+ #hjerterHest{
+    position: absolute;
+    max-width: 14%;
+    max-height: 14%;
+    margin-top: 32.62%;
+    z-index: 2;
+ }
+ 
+ #kloverHest {
+    position: absolute;
+    max-width: 14%;
+    max-height: 14%;
+    margin-top: 25.8%;
+    z-index: 2;
+ }
+
+ #sparHest {
+    position: absolute;
+    max-width: 14%;
+    max-height: 14%;
+    margin-top: 39.52%;
+    z-index: 2;
+ }
+
         
 @font-face {
     font-family: horse;
