@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veddeløpet</title>
     <style>
+        body{
+            width: 100%;
+        }
         /*.hester{
             display: flex;
             flex-direction: column;
@@ -41,6 +47,10 @@
         #revealCard{
             width: 50px;
         }
+        .card{
+            display: flex;
+            flex-direction: row;
+        }
     </style>
 </head>
 <body>
@@ -50,10 +60,7 @@
         <div id="revealedSuit" style="display: none;"></div>
     </div>
 
-    <div class="kort">
-        
-
-    </div>
+    
    
     <div class="hester">
         <div  id="heart"><img src="Hjerter.png" class="hest"></div>
@@ -96,33 +103,33 @@ document.getElementById("revealCard").addEventListener("click", function() {
         function moveHeart() {
            
                 // Angi avstanden du vil flytte objektet
-                const distanceToMove = 100; // endre denne verdien etter behov
+                const distanceToMove = 10; // endre denne verdien etter behov
                 const currentLeft = parseInt(heart.style.left) || 0;
-                heart.style.left = (currentLeft + distanceToMove) + "px";
+                heart.style.left = (currentLeft + distanceToMove) + "%";
             
         }
         function moveSpar() {
            
                 // Angi avstanden du vil flytte objektet
-                const distanceToMove = 100; // endre denne verdien etter behov
+                const distanceToMove = 10; // endre denne verdien etter behov
                 const currentLeft = parseInt(spar.style.left) || 0;
-                spar.style.left = (currentLeft + distanceToMove) + "px";
+                spar.style.left = (currentLeft + distanceToMove) + "%";
             
         }
         function moveClover() {
            
                 // Angi avstanden du vil flytte objektet
-                const distanceToMove = 100; // endre denne verdien etter behov
+                const distanceToMove = 10; // endre denne verdien etter behov
                 const currentLeft = parseInt(clover.style.left) || 0;
-                clover.style.left = (currentLeft + distanceToMove) + "px";
+                clover.style.left = (currentLeft + distanceToMove) + "%";
             
         }
         function moveRuter() {
          
                 // Angi avstanden du vil flytte objektet
-                const distanceToMove = 100; // endre denne verdien etter behov
+                const distanceToMove = 10; // endre denne verdien etter behov
                 const currentLeft = parseInt(ruter.style.left) || 0;
-                ruter.style.left = (currentLeft + distanceToMove) + "px";
+                ruter.style.left = (currentLeft + distanceToMove) + "%";
             
         }
        
