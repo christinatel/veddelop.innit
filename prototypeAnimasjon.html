@@ -2,67 +2,88 @@
 <html>
 <head>
     <style>
-        .hester{
+        /*.hester{
             display: flex;
             flex-direction: column;
             width: max-content;
+        }*/
+        div{
+            border: 1px solid black;
         }
         #heart {
             position: absolute;
-            top: 50px;
+            top: 100px;
             left: 50px;
             transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
         }
 
         #spar {
             position: absolute;
-            top: 100px;
+            top: 150px;
             left: 50px;
             transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
         }
         #clover {
             position: absolute;
-            top: 150px;
+            top: 200px;
             left: 50px;
             transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
         }
         #ruter {
             position: absolute;
-            top: 200px;
+            top: 250px;
             left: 50px;
             transition: left 0.5s; /* Legg til en overgangseffekt på 'left' -egenskapen */
+        }
+        .hest{
+            width: 50px;
+        }
+        #revealCard{
+            width: 50px;
         }
     </style>
 </head>
 <body>
     <div class="card">
-        <button id="revealCard">Trykk</button>
+        <img src="kortbak.png" alt="bakside spillkort" id="revealCard">
+       <!-- <button id="revealCard">Trykk</button>-->
         <div id="revealedSuit" style="display: none;"></div>
+    </div>
+
+    <div class="kort">
+        
+
     </div>
    
     <div class="hester">
-        <div class="hest" id="heart"><img src="Hjerter.png" style="width: 50px;"></div>
-        <div class="hest" id="spar"><img src="Spar.png" style="width: 50px;"></div>
-        <div class="hest" id="clover"><img src="Kløver.png" style="width: 50px;"></div>
-        <div class="hest" id="ruter"><img src="Ruter.png" style="width: 50px;"></div>
+        <div  id="heart"><img src="Hjerter.png" class="hest"></div>
+        <div id="spar"><img src="Spar.png" class="hest"></div>
+        <div  id="clover"><img src="Kløver.png" class="hest"></div>
+        <div  id="ruter"><img src="Ruter.png" class="hest"></div>
     </div>
     <script>
-          const suits = ["Spar", "Clover", "Ruter", "Hearts"];
+
+        let Hearts = "hjerterkort.webp";
+        let Spar = "sparkort.png";
+        let Clover = "kloverkort.svg";
+        let Ruter = "Ruterkort.png";
+
+          const suits = [Spar, Clover, Ruter, Hearts];
  
 document.getElementById("revealCard").addEventListener("click", function() {
     const revealedSuit = suits[Math.floor(Math.random() * suits.length)];
-    document.getElementById("revealedSuit").textContent = revealedSuit;
+    document.getElementById("revealedSuit").innerHTML = "<img src='"+revealedSuit+"' style='width: 50px'>";
     document.getElementById("revealedSuit").style.display = "block";
-    if(revealedSuit == "Hearts"){
+    if(revealedSuit == Hearts){
         moveHeart()
     }
-    else if(revealedSuit == "Spar"){
+    else if(revealedSuit == Spar){
         moveSpar()
     }
-    else if(revealedSuit == "Ruter"){
+    else if(revealedSuit == Ruter){
         moveRuter()
     }
-    else if(revealedSuit == "Clover"){
+    else if(revealedSuit == Clover){
         moveClover()
     }
 });
