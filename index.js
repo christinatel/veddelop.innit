@@ -9,9 +9,9 @@ function lukk(){
 }
 
 
-   let Hearts = "Hjerterkort.webp";
+   let Hearts = "Hjerterkort.png";
         let Spar = "Sparkort.png";
-        let Clover = "Kloverkort.svg";
+        let Clover = "Kloverkort.png";
         let Ruter = "Ruterkort.png";
 
           const suits = [Spar, Clover, Ruter, Hearts];
