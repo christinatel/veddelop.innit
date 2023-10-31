@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veddeløpet</title>
-    <script src="index.js"></script>
     <link rel="stylesheet" href="stylesheet.css" media="screen">
     <link rel="icon" href="Hjerter.ico" type="image/x-icon"/>
 </head>
@@ -18,16 +17,25 @@
     </ul>
 </nav>   
 
-   
+<div id="sluttSpill" style="display: none;">
+    <img src="fyrverkeri.gif" id="fyrverkeri">
+    <audio loop id="audio">
+        <source src="Firework Sound Effect.wav" type="audio/wav">
+    </audio>        
+</div>
 
         <div class="tribuneKort">
         <img src="Publikum2.png" id="publikum">
         <img src="KortBakgrunn.jpeg" id="KortBakgrunn">
-        <img src="card back red.png" id="bakKort">
-        her er det kort
+       
+        <div class="card">
+            <img src="card back red.png" id="revealCard">
+            <div id="revealedSuit" style="display: none;"></div>
+        </div>
           
         </div>
-     <div id="stall">
+     
+    <div id="stall">
         <img src="Ruter.png" id="ruterHest">
         <img src="Hjerter.png" id="hjerterHest">
         <img src="Klover.png" id="kloverHest">
@@ -44,12 +52,14 @@
         <button onclick="lukk()">Lukk</button>
     </div>
 
-  <div class="card">
-        <button id="revealCard"></button>
-        <div id="revealedSuit" style="display: none;"></div>
-    </div>
+    <div class="footer">
 
-    
+    <p>Kontakt oss</p>
+    <p>Tlf. 98765432</p>
+    <p>Mail: gruppe16@ntnu.no</p>
+</div>
+
+<script src="index.js"></script>    
 
 </body>
 </html>
