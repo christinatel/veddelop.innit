@@ -151,4 +151,22 @@ a:hover {
      color: black;
 
  }
+.card img.animate-card {
+    animation-name: cardAnimation;
+    animation-duration: 0.5s; /* Endre varighet etter behov */
+    animation-fill-mode: forwards;
+}
 
+@keyframes cardAnimation {
+    0% {
+                transform: translateX(0);
+            }
+            52% {
+                transform: translateX(50px);
+                opacity: 0; /* Gjør kortet usynlig etter 50% av animasjonen */
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 0; /* Gjør kortet synlig igjen på slutten av animasjonen */
+            }
+        }
