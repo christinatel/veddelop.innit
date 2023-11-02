@@ -1,12 +1,12 @@
 function popup(){
     rules = document.getElementById("rules");
-    rules.style.display="block";
-}
-
-function lukk(){
-    rules = document.getElementById("rules");
-    rules.style.display="none";
-}
+    
+    if (rules.style.display==="none") {
+        rules.style.display="block"; 
+    }
+    else{
+        rules.style.display="none"; ; 
+    }
  
 let spillAvsluttet = false;
 
