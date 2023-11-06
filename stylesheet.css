@@ -1,61 +1,3 @@
-
-#rules {
-    position: absolute;
-    width: 60%;
-    height: 60%;
-
-    border-radius: 50px;
-    margin-top: 10%;
-    margin-left: 10%;
-    
-}
-
-/* #vedd {
-    position: absolute;
-    width: 60%;
-    height: 60%;
-    
-    background: #F5F5F5;
-    border-radius: 50px;
-    margin-top: 10%;
-    margin-left: 19%;
-    z-index: 999;
-     }
-
-#ruterSymbol{
-position: absolute;
-max-width: 17%;
-max-height: 90%;
-margin-top: 27%;
-margin-left: 22%;
-}
-
-#sparSymbol{
-position: absolute;
-max-width: 17%;
-max-height: 90%;
-margin-top: 13%;
-margin-left: 22%;
-
-}
-
-#hjerterSymbol{
-position: absolute;
-max-width: 17%;
-max-height: 90%;
-margin-top: 13%;
-margin-left: 6%;
-}
-
-#kloverSymbol{
- position: absolute;
- max-width: 17%;
- max-height: 90%;
-margin-top: 27%;
-margin-left: 6%;
-}
-*/
-
 body{
    
     
@@ -63,8 +5,42 @@ body{
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: auto, cover;
+     background-color: #DA3737;
      }
  
+     .rules {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        background: #C23939;
+        border-radius: 50px;
+        margin-top: 5%;
+        margin-left: 19%;
+        color: #FFFFFF;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 4;
+     }
+
+    .sluttSpill {
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        background: #FFFFFF;
+        border-radius: 50px;
+        margin-top: 5%;
+        margin-left: 19%;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 10px solid #C23939;
+    }
+
+    
+
  #publikum {
      position: absolute;
      max-width: 100%;
@@ -121,6 +97,8 @@ margin-top: 19%;
     max-height: 14%;
     margin-top: 18.9%;
     z-index: 2;
+    left: 0;
+    transition: left 0.5s;
  }
  
  #hjerterHest{
@@ -129,6 +107,8 @@ margin-top: 19%;
     max-height: 14%;
     margin-top: 32.62%;
     z-index: 2;
+    left: 0;
+    transition: left 0.5s;
  }
  
  #kloverHest {
@@ -137,6 +117,8 @@ margin-top: 19%;
     max-height: 14%;
     margin-top: 25.8%;
     z-index: 2;
+    left: 0;
+    transition: left 0.5s;
  }
 
  #sparHest {
@@ -145,13 +127,15 @@ margin-top: 19%;
     max-height: 14%;
     margin-top: 39.52%;
     z-index: 2;
+    left: 0;
+    transition: left 0.5s;
  }
  #revealedSuit {
     position: absolute;
-    width: 25%; /* Match the width of revealCard */
-    height: 25%; /* Match the height of revealCard */
+    width: 25%; 
+    height: 25%; 
     margin-top: 3.5%;
-    margin-left: 5%; /* Match the margin-left of revealCard */
+    margin-left: 5%; 
     z-index: 2;
 }
 
@@ -210,22 +194,11 @@ a:hover {
 }
 
 .fargeknapp {
-    background-color: #C23939; /* A slightly darker red */
+    background-color: #C23939;
     color: white;
-    padding: 10px 15px; /* Adjust the padding as needed */
-    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; 
+    border-radius: 5px; 
 }
-
-  #rules{
-             position: absolute;
-             left: 10%;
-             top: 10%;
-             bottom: 10%;
-             right: 10%;
-             background-color: white;
-             display: none;
-             z-index: 4;
-         }
  
  a:hover {
      color: black;
@@ -252,7 +225,7 @@ a:hover {
 
 .card img.animate-card {
     animation-name: cardAnimation;
-    animation-duration: 0.5s; /* Endre varighet etter behov */
+    animation-duration: 0.5s; 
     animation-fill-mode: forwards;
 }
 
@@ -262,33 +235,70 @@ a:hover {
             }
             52% {
                 transform: translateX(50px);
-                opacity: 0; /* Gjør kortet usynlig etter 50% av animasjonen */
+                opacity: 0; 
             }
             100% {
                 transform: translateX(0);
-                opacity: 0; /* Gjør kortet synlig igjen på slutten av animasjonen */
+                opacity: 0; 
             }
-        }
-
-      
-
-        #sluttSpill {
-            position: absolute;
-            width: 60%;
-            height: 60%;
-            background: #C23939;
-            border-radius: 50px;
-            margin-top: 5%;
-            margin-left: 19%;
-            z-index: 4;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         #fyrverkeri {
+            position: absolute;
             max-width: 100%;
             max-height: 100%;
             display: block;
             margin: 0 auto;
+            z-index: 5;
         }
+
+        .reglerboks {
+            font-family: horse;
+            font-size: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 0;
+            line-height: 30px;
+        }
+
+        .overskrift {
+            font-family: horse;
+            font-size: 35px;
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-top: 0;
+            line-height: 30px;
+        }
+
+        #spilligjen{
+            position: absolute;
+            width: 100px; 
+            height: 30px; 
+            display: block;
+            margin-top: 47%;
+            z-index: 7;
+            left: 44%;
+            background-color:#DA3737;
+            color: #fff;
+            border:none;
+            border-radius:10px;
+        }
+
+        .sort {
+            position: absolute;
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 0 auto;
+            z-index: 4;
+        }
+
+.vinnerene {
+    position: absolute;
+    margin-left: 60.5%;
+    margin-top: 25%;
+    font-family: horse;
+    font-size: 35px;
+    color: black;
+    z-index: 6;
+}
