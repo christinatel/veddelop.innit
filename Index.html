@@ -8,20 +8,49 @@
     <link rel="icon" href="Hjerter.ico" type="image/x-icon"/>
 </head>
 <body>
-    
+
 <nav>
     <ul>
         <li class="logo"><img src="Logo.png" alt="Logo"></li>
         <li class="navbar"><a href="javascript:void(0);" onclick="popup()" class="fargeknapp">Spilleregler</a></li>
-        <li class="navbar"><a href="spill18.html" class="fargeknapp">18+</a></li>
+        <li class="navbar"><a href="javascript:void(0);" onclick="reglerAtten()" class="fargeknapp">18+</a></li>
     </ul>
-</nav>   
+</nav>
 
-<div id="sluttSpill" style="display: none;">
+<div id="hjerterDiv" class="sluttSpill" style="display: none;">
+    <p class="vinnerene">Hjerter er vinneren!</p>  <img src='Hjerter symbol.png' class='sort'>
     <img src="fyrverkeri.gif" id="fyrverkeri">
     <audio loop id="audio">
         <source src="Firework Sound Effect.wav" type="audio/wav">
-    </audio>        
+    </audio>   
+    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
+</div>
+
+<div id="ruterDiv" class="sluttSpill" style="display: none;">
+    <p class="vinnerene">Ruter er vinneren!</p>  <img src='Ruter symbol.png' class='sort'>
+    <img src="fyrverkeri.gif" id="fyrverkeri">
+    <audio loop id="audio">
+        <source src="Firework Sound Effect.wav" type="audio/wav">
+    </audio>   
+    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
+</div>
+
+<div id="kloverDiv" class="sluttSpill" style="display: none;">
+    <p class="vinnerene">Kløver er vinneren!</p>  <img src='Kløver symbol.png' class='sort'>
+    <img src="fyrverkeri.gif" id="fyrverkeri">
+    <audio loop id="audio">
+        <source src="Firework Sound Effect.wav" type="audio/wav">
+    </audio>   
+    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
+</div>
+
+<div id="sparDiv" class="sluttSpill" style="display: none;">
+    <p class="vinnerene">Spar er vinneren!</p>  <img src='Spar symbol.png' class='sort'>
+    <img src="fyrverkeri.gif" id="fyrverkeri">
+    <audio loop id="audio">
+        <source src="Firework Sound Effect.wav" type="audio/wav">
+    </audio>   
+    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
 </div>
 
         <div class="tribuneKort">
@@ -42,20 +71,50 @@
         <img src="Spar.png" id="sparHest">
     </div>
        
-    </div><!--body-->
+    </div>
     <div class="bane">
         <img src="Bane.png" id="bane" >
     
-        
-    </div><!--footer-->
-    <div id="rules">
+      
+        <div id="rules" class="rules"><p class="reglerboks"><br><p class="overskrift">Før spillet begynner:</p>
+            <ol class="reglerboks">
+            <li>Man velger en hest man tror vil vinne.</li>
+            <li>Man velger selv hva man vedder om/med og kan f.eks. heder og ære eller poeng.</li>
+            <li>Første hesten i mål vinner.</li>
+           </ol>
+           
+            <p class="overskrift">Hvordan spille:</p> 
+            <ol class="reglerboks">
+            <li>En av spillerne trekker ett og ett kort ved å trykke på kortet.</li>
+            <li>Sorten på kortet viser hvilken hest som vil bevege seg framover.</li>
+            <li>Det er førstemann til mål.</li>  
+            </ol>
+    
+            <p class="reglerboks">LYKKE TIL, LA DEN BESTE HESTEN VINNE.<br>OG DER ER VI I GANG!</p>
+        </div>
+        <div id="reglerAtten" class="rules"><br><p class="overskrift">Før spillet begynner:</p>
+        <ol class="reglerboks">
+        <li>Man velger en hest man tror vil vinne. Er hukommelsen din dårlig skriv det ned.</li>
+        <li>Deretter velg hvor mange slurker du ønsker å vedde på hesten.</li>
+        <li>Når spillet er over. Vil de som veddet på vinnerhesten kunne dele ut antall slurker de veddet. Taperne må drikke antall slurker de veddet i tillegg til slurker de vår utdelt av vinneren.</li>
+       </ol>
+       
+        <p class="overskrift">Hvordan spille:</p> 
+        <ol class="reglerboks">
+        <li>En av spillerne trekker ett og ett kort ved å trykke på kortet.</li>
+        <li>Sorten på kortet viser hvilken hest som vil bevege seg framover.</li>
+        <li>Det er førstemann til mål.</li>  
+        </ol>
+
+        <p class="reglerboks">LYKKE TIL, LA DEN BESTE HESTEN VINNE.<br>OG DER ER VI I GANG!</p>
+        </div>    
     </div>
 
     <div class="footer">
 
     <p>Kontakt oss</p>
-    <p>Tlf. 98765432</p>
-    <p>Mail: gruppe16@ntnu.no</p>
+    <p>Gruppe 16</p>
+    <p>Medlemmer: Christian Aas, Erik Langvik, Karsten Grøtterud, Betina Linge og Christina Moe</p>
 </div>
 
 <script src="index.js"></script>    
