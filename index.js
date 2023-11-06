@@ -1,13 +1,23 @@
-function popup(){
-    rules = document.getElementById("rules");
-    
-    if (rules.style.display==="none") {
-        rules.style.display="block"; 
+function popup() {
+    var rules = document.getElementById("rules");
+
+    if (rules.style.display === "none" || rules.style.display === "") {
+        rules.style.display = "block";
+    } else {
+        rules.style.display = "none";
     }
-    else{
-        rules.style.display="none"; ; 
-    }
+}
  
+function reglerAtten(){
+    let rules18 = document.getElementById("reglerAtten");
+ 
+    if (rules18.style.display === "none" || rules18.style.display === "") {
+        rules18.style.display = "block";
+    } else {
+        rules18.style.display = "none";
+    }
+}
+
 let spillAvsluttet = false;
 
 let Hearts = "Hjerterkort.png";
@@ -17,38 +27,46 @@ let Ruter = "Ruterkort.png";
 
   const suits = [Spar, Clover, Ruter, Hearts];
 
-document.getElementById("revealCard").addEventListener("click", function() {
-
+  function bevegHest() {
     if(!spillAvsluttet) {
-
-
-    const revealedSuit = suits[Math.floor(Math.random() * suits.length)];
-
-document.getElementById("revealedSuit").innerHTML = "<img src='card back red.png' id='cardBack'> </img> <img src='" + revealedSuit + "' id='cardFront'>";
-document.getElementById("revealedSuit").style.display = "block";
-// Legg til en klasse for å starte animasjonen
-document.getElementById("revealCard").classList.add("animate-card");
-
-// Etter en viss forsinkelse, fjern animasjonsklassen for å tilbakestille kortet
-setTimeout(() => {
-document.getElementById("revealCard").classList.remove("animate-card");
-
-}, 500); // Endre tiden etter behov
-
-if(revealedSuit == Hearts){
-moveHeart()
+ 
+ 
+        const revealedSuit = suits[Math.floor(Math.random() * suits.length)];
+   
+    document.getElementById("revealedSuit").innerHTML = "<img src='card back red.png' id='cardBack'> </img> <img src='" + revealedSuit + "' id='cardFront'>";
+    document.getElementById("revealedSuit").style.display = "block";
+    // Legg til en klasse for å starte animasjonen
+    document.getElementById("revealCard").classList.add("animate-card");
+   
+    // Etter en viss forsinkelse, fjern animasjonsklassen for å tilbakestille kortet
+    setTimeout(() => {
+    document.getElementById("revealCard").classList.remove("animate-card");
+   
+    }, 500); // Endre tiden etter behov
+   
+    if(revealedSuit == Hearts){
+    moveHeart()
+    }
+    else if(revealedSuit == Spar){
+    moveSpar()
+    }
+    else if(revealedSuit == Ruter){
+    moveRuter()
+    }
+    else if(revealedSuit == Clover){
+    moveClover()
+    }
+    }
 }
-else if(revealedSuit == Spar){
-moveSpar()
-}
-else if(revealedSuit == Ruter){
-moveRuter()
-}
-else if(revealedSuit == Clover){
-moveClover()
-}
-}
+ 
+document.getElementById("revealCard").addEventListener("click", function() {
+bevegHest();
 });
+ 
+document.addEventListener('keyup', event => {
+    bevegHest()
+});
+
 
 let heart = document.getElementById("hjerterHest");
 let spar = document.getElementById("sparHest")
@@ -88,7 +106,7 @@ function moveRuter() {
     
 }
 
-function HestMaal(){
+/*function HestMaal(){
     let MaalPosisjon = 90;
     let HjerterPosisjon = parseInt(heart.style.left)
     let SparPosisjon = parseInt(spar.style.left)
@@ -105,4 +123,42 @@ function HestMaal(){
     }
 
  }
+ setInterval(HestMaal, 100);*/
+
+
+function HestMaal(){
+    let MaalPosisjon = 90;
+    let HjerterPosisjon = parseInt(heart.style.left)
+    let SparPosisjon = parseInt(spar.style.left)
+    let RuterPosisjon = parseInt(ruter.style.left)
+    let CloverPosisjon = parseInt(clover.style.left)
+    let hjerterDiv = document.getElementById("hjerterDiv");
+    let ruterDiv = document.getElementById("ruterDiv");
+    let kloverDiv = document.getElementById("kloverDiv");
+    let sparDiv = document.getElementById("sparDiv");
+    
+ 
+    if(HjerterPosisjon >= MaalPosisjon || SparPosisjon >= MaalPosisjon || RuterPosisjon >= MaalPosisjon || CloverPosisjon >= MaalPosisjon){
+        let audioElement = document.getElementById("audio");
+        
+        audioElement.play();
+        spillAvsluttet = true;    
+       
+    }
+ 
+    if(HjerterPosisjon >= MaalPosisjon){
+        hjerterDiv.style.display ="block";
+    }
+    else if(SparPosisjon >= MaalPosisjon){
+        sparDiv.style.display ="block";
+    }
+    else if(RuterPosisjon >= MaalPosisjon){
+        ruterDiv.style.display ="block";
+    }
+    else if(CloverPosisjon >= MaalPosisjon){
+        kloverDiv.style.display ="block";
+ 
+    
+ }
+}
  setInterval(HestMaal, 100);
