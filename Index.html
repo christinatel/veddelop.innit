@@ -17,12 +17,21 @@
     </ul>
 </nav>
 
+<audio loop id="lyd" style="display: none;">
+    <source src="veddelop.wav" type="audio/wav">
+</audio>
+
 <div id="hjerterDiv" class="sluttSpill" style="display: none;">
     <p class="vinnerene">Hjerter er vinneren!</p>  <img src='Hjerter symbol.png' class='sort'>
     <img src="fyrverkeri.gif" id="fyrverkeri">
     <audio loop id="audio">
         <source src="Firework Sound Effect.wav" type="audio/wav">
-    </audio>   
+    </audio>
+    
+    <audio id="audiohjerter">
+        <source src="hjertervinn.wav" type="audio/wav">
+    </audio>
+    
     <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
 </div>
 
@@ -31,7 +40,12 @@
     <img src="fyrverkeri.gif" id="fyrverkeri">
     <audio loop id="audio">
         <source src="Firework Sound Effect.wav" type="audio/wav">
-    </audio>   
+    </audio> 
+
+    <audio id="audioruter">
+        <source src="rutervinn.wav" type="audio/wav">
+    </audio>
+
     <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
 </div>
 
@@ -40,7 +54,12 @@
     <img src="fyrverkeri.gif" id="fyrverkeri">
     <audio loop id="audio">
         <source src="Firework Sound Effect.wav" type="audio/wav">
-    </audio>   
+    </audio>  
+
+    <audio id="audioklover">
+        <source src="klovervinn.wav" type="audio/wav">
+    </audio>
+
     <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
 </div>
 
@@ -50,6 +69,11 @@
     <audio loop id="audio">
         <source src="Firework Sound Effect.wav" type="audio/wav">
     </audio>   
+
+    <audio id="audiospar">
+        <source src="sparvinn.wav" type="audio/wav">
+    </audio>
+
     <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
 </div>
 
@@ -74,6 +98,7 @@
     </div>
     <div class="bane">
         <img src="Bane.png" id="bane" >
+    
       
         <div id="rules" class="rules"><p class="reglerboks"><br><p class="overskrift">Før spillet begynner:</p>
             <ol class="reglerboks">
