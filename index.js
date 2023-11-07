@@ -63,8 +63,16 @@ document.getElementById("revealCard").addEventListener("click", function() {
 bevegHest();
 });
  
-document.addEventListener('keyup', event => {
+document.addEventListener('keydown', (e) => {
+    if (
+        e.keyCode == 37 ||
+        e.keyCode == 38 ||
+        e.keyCode == 39 ||
+        e.keyCode == 40      
+  ) {
     bevegHest()
+  }
+   
 });
 
 
@@ -125,6 +133,21 @@ function moveRuter() {
  }
  setInterval(HestMaal, 100);*/
 
+ function HestStart(){
+    let startPosisjon = 5;
+    let HjerterPosisjon = parseInt(heart.style.left)
+    let SparPosisjon = parseInt(spar.style.left)
+    let RuterPosisjon = parseInt(ruter.style.left)
+    let CloverPosisjon = parseInt(clover.style.left)
+   
+ 
+    if(HjerterPosisjon >= startPosisjon || SparPosisjon >= startPosisjon || RuterPosisjon >= startPosisjon || CloverPosisjon >= startPosisjon){
+        let lyd = document.getElementById("lyd");
+        lyd.play();  
+       
+    }
+}
+setInterval(HestStart, 100);
 
 function HestMaal(){
     let MaalPosisjon = 90;
@@ -136,29 +159,42 @@ function HestMaal(){
     let ruterDiv = document.getElementById("ruterDiv");
     let kloverDiv = document.getElementById("kloverDiv");
     let sparDiv = document.getElementById("sparDiv");
+    let hjertervinn = document.getElementById("audiohjerter");
+        let rutervinn = document.getElementById("audioruter");
+        let klovervinn = document.getElementById("audioklover");
+        let sparvinn = document.getElementById("audiospar");
     
  
     if(HjerterPosisjon >= MaalPosisjon || SparPosisjon >= MaalPosisjon || RuterPosisjon >= MaalPosisjon || CloverPosisjon >= MaalPosisjon){
         let audioElement = document.getElementById("audio");
         
+        
         audioElement.play();
+        lyd.pause();
+        audioElement.volume = 0.6;
         spillAvsluttet = true;    
        
     }
  
     if(HjerterPosisjon >= MaalPosisjon){
         hjerterDiv.style.display ="block";
+        hjertervinn.play();
+        hjertervinn.volume = 100;
     }
     else if(SparPosisjon >= MaalPosisjon){
         sparDiv.style.display ="block";
+        sparvinn.play();
+        sparvinn.volume = 100;
     }
     else if(RuterPosisjon >= MaalPosisjon){
         ruterDiv.style.display ="block";
+        rutervinn.play();
+        rutervinn.volume = 100;
     }
     else if(CloverPosisjon >= MaalPosisjon){
         kloverDiv.style.display ="block";
- 
-    
+        klovervinn.play();
+        klovervinn.volume = 100;
  }
 }
  setInterval(HestMaal, 100);
