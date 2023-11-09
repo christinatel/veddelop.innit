@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<nav>
+<nav> <!-- Menylinje på toppen av siden -->
     <ul>
         <li class="logo"><img src="Logo.png" alt="Logo"></li>
         <li class="navbar"><a href="javascript:void(0);" onclick="popup()" class="fargeknapp">Spilleregler</a></li>
@@ -17,39 +17,39 @@
     </ul>
 </nav>
 
-<audio loop id="lyd" style="display: none;">
+<audio loop id="lyd" style="display: none;"> <!-- Definerer bakgrunnslyd -->
     <source src="veddelop.wav" type="audio/wav">
 </audio>
 
-<div id="hjerterDiv" class="sluttSpill" style="display: none;">
-    <p class="vinnerene">Hjerter er vinneren!</p>  <img src='Hjerter symbol.png' class='sort'>
-    <img src="fyrverkeri.gif" id="fyrverkeri">
-    <audio loop id="audio">
-        <source src="Firework Sound Effect.wav" type="audio/wav">
+<div id="hjerterDiv" class="sluttSpill" style="display: none;"> <!-- Hjerter vinner div -->
+    <p class="vinnerene">Hjerter er vinneren!</p>  <img src='Hjerter symbol.png' class='sort'> <!-- Tekst og symbol vises -->
+    <img src="fyrverkeri.gif" id="fyrverkeri"> <!-- Fyrverkeri vises -->
+    <audio loop id="audio"> <!-- Fyrverkeri lyd -->
+        <source src="Firework Sound Effect.wav" type="audio/wav"> 
     </audio>
     
-    <audio id="audiohjerter">
-        <source src="hjertervinn.wav" type="audio/wav">
+    <audio id="audiohjerter"> <!-- Type som vinner lyd -->
+        <source src="hjertervinn.wav" type="audio/wav"> 
     </audio>
     
-    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
+    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button> <!-- Restart knapp --> 
 </div>
 
-<div id="ruterDiv" class="sluttSpill" style="display: none;">
-    <p class="vinnerene">Ruter er vinneren!</p>  <img src='Ruter symbol.png' class='sort'>
-    <img src="fyrverkeri.gif" id="fyrverkeri">
-    <audio loop id="audio">
+<div id="ruterDiv" class="sluttSpill" style="display: none;"> <!-- Ruter vinner div -->
+    <p class="vinnerene">Ruter er vinneren!</p>  <img src='Ruter symbol.png' class='sort'> <!-- Tekst og symbol vises -->
+    <img src="fyrverkeri.gif" id="fyrverkeri"> <!-- Fyrverkeri vises -->
+    <audio loop id="audio"> <!-- Fyrverkeri lyd -->
         <source src="Firework Sound Effect.wav" type="audio/wav">
     </audio> 
 
-    <audio id="audioruter">
+    <audio id="audioruter"> <!-- Type som vinner lyd -->
         <source src="rutervinn.wav" type="audio/wav">
     </audio>
 
     <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
 </div>
 
-<div id="kloverDiv" class="sluttSpill" style="display: none;">
+<div id="kloverDiv" class="sluttSpill" style="display: none;"> <!-- Kløver vinner div -->
     <p class="vinnerene">Kløver er vinneren!</p>  <img src='Kløver symbol.png' class='sort'>
     <img src="fyrverkeri.gif" id="fyrverkeri">
     <audio loop id="audio">
@@ -60,24 +60,24 @@
         <source src="klovervinn.wav" type="audio/wav">
     </audio>
 
-    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
+    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button> <!-- Restart knapp -->      
 </div>
 
-<div id="sparDiv" class="sluttSpill" style="display: none;">
-    <p class="vinnerene">Spar er vinneren!</p>  <img src='Spar symbol.png' class='sort'>
-    <img src="fyrverkeri.gif" id="fyrverkeri">
-    <audio loop id="audio">
+<div id="sparDiv" class="sluttSpill" style="display: none;"> <!-- Spar vinner div -->
+    <p class="vinnerene">Spar er vinneren!</p>  <img src='Spar symbol.png' class='sort'> <!-- Tekst og symbol vises -->
+    <img src="fyrverkeri.gif" id="fyrverkeri"> <!-- Fyrverkeri vises -->
+    <audio loop id="audio"> <!-- Fyrverkeri lyd -->
         <source src="Firework Sound Effect.wav" type="audio/wav">
     </audio>   
 
-    <audio id="audiospar">
+    <audio id="audiospar"> <!-- Type som vinner lyd -->
         <source src="sparvinn.wav" type="audio/wav">
     </audio>
 
-    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button>     
+    <button id="spilligjen" onclick="location.reload()">Spill på nytt</button> <!-- Restart knapp -->   
 </div>
 
-        <div class="tribuneKort">
+        <div class="tribuneKort"> <!-- Div for tribune og kortområde -->  
         <img src="Publikum2.png" id="publikum">
         <img src="KortBakgrunn.jpeg" id="KortBakgrunn">
        
@@ -88,7 +88,7 @@
           
         </div>
      
-    <div id="stall">
+    <div id="stall"> <!-- Div for hestene hvor de blir definert -->  
         <img src="Ruter.png" id="ruterHest">
         <img src="Hjerter.png" id="hjerterHest">
         <img src="Klover.png" id="kloverHest">
@@ -96,11 +96,11 @@
     </div>
        
     </div>
-    <div class="bane">
+    <div class="bane"> <!-- Div for selve banen med mållinje -->  
         <img src="Bane.png" id="bane" >
     
       
-        <div id="rules" class="rules"><p class="reglerboks"><br><p class="overskrift">Før spillet begynner:</p>
+        <div id="rules" class="rules"><p class="reglerboks"><br><p class="overskrift">Før spillet begynner:</p> <!-- Div for begge regelboksene -->   
             <ol class="reglerboks">
             <li>Velg en hest du tror vil vinne.</li>
             <li>Man velger selv hva man vedder om/med, det kan f.eks. være heder og ære eller poeng.</li>
@@ -134,14 +134,14 @@
         </div>    
     </div>
 
-    <div class="footer">
+    <div class="footer"> <!-- Footer nederst på siden -->   
 
     <p>Kontakt oss</p>
     <p>Gruppe 16</p>
     <p>Medlemmer: Christian Aas, Erik Langvik, Karsten Grøtterud, Betina Linge og Christina Moe</p>
 </div>
 
-<script src="index.js"></script>    
+<script src="index.js"></script> <!-- JavaScript filen -->   
 
 </body>
 </html>
