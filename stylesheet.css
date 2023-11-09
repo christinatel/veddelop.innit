@@ -1,13 +1,15 @@
+
 body{
    
-    
+    /* plasserer og farger bakgrunnen til spillet */
     background-position: center top;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto, cover;
     background-color: #DA3737;
     }
-
+   
+    /* Plasserer og gir farge til spilleregler.diven på tekst og bakgrunn */
     .rules {
        position: absolute;
        width: 60%;
@@ -24,6 +26,7 @@ body{
        z-index: 4;
     }
 
+    /* Plasserer og gir farge på tekst og bakgrunn til vinnerboks.diven */
    .sluttSpill {
        position: absolute;
        width: 60%;
@@ -39,7 +42,7 @@ body{
        border: 10px solid #C23939;
    }
 
-   
+   /* Plasserer publikum.diven */
 
 #publikum {
     position: absolute;
@@ -49,6 +52,7 @@ body{
     z-index: -1; 
 }
 
+/*Plasser løpebanen*/
 #bane{
 
 position: absolute;
@@ -59,6 +63,7 @@ margin-top: 19%;
 
 }
 
+/*Plasserer den grønne bakgrunnen til kortene*/
 #KortBakgrunn{
    position: absolute;
    max-width: 100%; 
@@ -67,6 +72,7 @@ margin-top: 19%;
  
 }
 
+/*plasserer kortene med framsiden*/
 #cardFront {
    position: absolute;
    max-width: 100%;
@@ -75,6 +81,7 @@ margin-top: 19%;
    
 }
 
+/*Plasserer kortstokken med baksiden, denne er ikke knyttet til animationen men blir liggende alltid. Sånn at det ser ut som det ligger en kortstokk der.  */
 #cardBack {
    position: absolute;
    max-width: 100%;
@@ -82,6 +89,8 @@ margin-top: 19%;
    
    
 }
+
+/*Dette er baksiden av korttene med animation*/
 #revealCard{
    position: absolute;
    max-width: 25%;
@@ -91,6 +100,7 @@ margin-top: 19%;
    z-index: 3;
 }
 
+/*Plasserer ruter hesten på sin plass på løpebanen*/
 #ruterHest{
    position: absolute;
    max-width: 14%;
@@ -101,6 +111,7 @@ margin-top: 19%;
    transition: left 0.5s;
 }
 
+/*Plasserer hjerter hesten på sin plass på løpebanen*/
 #hjerterHest{
    position: absolute;
    max-width: 14%;
@@ -111,6 +122,7 @@ margin-top: 19%;
    transition: left 0.5s;
 }
 
+/*Plasserer klover hesten på sin plass på løpebanen*/
 #kloverHest {
    position: absolute;
    max-width: 14%;
@@ -121,6 +133,7 @@ margin-top: 19%;
    transition: left 0.5s;
 }
 
+/*Plasserer spar hesten på sin plass på løpebanen*/
 #sparHest {
    position: absolute;
    max-width: 14%;
@@ -130,6 +143,8 @@ margin-top: 19%;
    left: 0;
    transition: left 0.5s;
 }
+
+/* Dette plasserer kortet med sorten som vises*/
 #revealedSuit {
    position: absolute;
    width: 25%; 
@@ -139,12 +154,14 @@ margin-top: 19%;
    z-index: 2;
 }
 
+/*Fonten på overskfiten "Veddeløpet"*/
 @font-face {
    font-family: horse;
    src:url(YoungSerif-Regular.ttf);
    
 }
 
+/*Plasserer meny baren*/
 * {
    margin: 0;
    padding: 0;
@@ -177,11 +194,11 @@ li.logo {
 img {
    max-height: 70px;
 }
-
+/*Legger teksten til høyre side av logoen*/
 .navbar {
    text-align: right; 
 }
-
+/*Utseende tekst i nav bar */
 a {
    text-decoration: none;
    color: white;
@@ -190,10 +207,11 @@ a {
    -webkit-text-stroke: 1px black;
 }
 
+/*Gjør at knappen i nav bar blir svart når du holder pilen over.*/
 a:hover {
    color: black;
 }
-
+/*Farger knappene i nav bar rød med hvit tekst*/
 .fargeknapp {
    background-color: #C23939;
    color: white;
@@ -201,10 +219,7 @@ a:hover {
    border-radius: 5px; 
 }
 
-a:hover {
-    color: black;
-}
-
+/*Plasserer og farger footeren nederst på siden*/
 .footer {
    padding-top: 10px;
    display: flex;
@@ -224,12 +239,13 @@ a:hover {
    font-size: 20px;
 }
 
+/*Definere hvor lang tid kort animationen skal ta*/
 .card img.animate-card {
    animation-name: cardAnimation;
    animation-duration: 0.5s; 
    animation-fill-mode: forwards;
 }
-
+/*Dette er selve kort animationen*/
 @keyframes cardAnimation {
    0% {
                transform: translateX(0);
@@ -243,7 +259,7 @@ a:hover {
                opacity: 0; 
            }
        }
-       
+       /*Plasseringen av fyrferkeri i sluttspill.diven*/
        #fyrverkeri {
            position: absolute;
            max-width: 100%;
@@ -252,7 +268,7 @@ a:hover {
            margin: 0 auto;
            z-index: 5;
        }
-
+       /*Plasserer regel boks*/
        .reglerboks {
            font-family: horse;
            font-size: 19px;
@@ -262,7 +278,7 @@ a:hover {
            line-height: 25px;
           
        }
-
+       /*Overskiften i regelboksen*/
        .overskrift {
            font-family: horse;
            font-size: 24px;
@@ -272,7 +288,7 @@ a:hover {
            line-height: 25px;
            text-decoration: underline;
        }
-
+       /*Plasserer og farger spill igjen knappen*/
        #spilligjen{
            position: absolute;
            width: 100px; 
@@ -286,7 +302,7 @@ a:hover {
            border:none;
            border-radius:10px;
        }
-
+       /*Plasserer den sorten som vinner inne i sluttSpill.diven*/
        .sort {
            position: absolute;
            max-width: 100%;
@@ -295,7 +311,7 @@ a:hover {
            margin: 0 auto;
            z-index: 4;
        }
-
+       /*Plasserer og farger teksten til vinner sorten*/
 .vinnerene {
    position: absolute;
    margin-left: 50%;
@@ -305,3 +321,4 @@ a:hover {
    color: black;
    z-index: 6;
 }
+
