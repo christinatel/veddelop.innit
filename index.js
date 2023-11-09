@@ -20,6 +20,17 @@ function reglerAtten(){
     }
 }
 
+//Knapp for å åpne/lukke div med informasjon om oss
+function omOss(){
+    let omOss = document.getElementById("omOss");
+ 
+    if (omOss.style.display === "none") {
+        omOss.style.display = "block";
+    } else {
+        omOss.style.display = "none";
+    }
+}
+
 
 //Setter spillAvsluttet til false, dette endres senere når en av hestene når målstreken
 let spillAvsluttet = false;
